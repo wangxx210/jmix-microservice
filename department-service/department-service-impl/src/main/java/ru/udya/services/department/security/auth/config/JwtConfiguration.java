@@ -1,5 +1,6 @@
 package ru.udya.services.department.security.auth.config;
 
+import io.jmix.oidc.OidcProperties;
 import io.jmix.oidc.claimsmapper.ClaimsRolesMapper;
 import io.jmix.oidc.jwt.JmixJwtAuthenticationConverter;
 import io.jmix.oidc.usermapper.OidcUserMapper;
@@ -31,8 +32,8 @@ public class JwtConfiguration {
     }
 
     @Bean
-    public JmixJwtAuthenticationConverter jmixJwtAuthenticationConverter(OidcUserMapper oidcUserMapper) {
-        return new ExtJmixJwtAuthenticationConverter(oidcUserMapper);
+    public JmixJwtAuthenticationConverter jmixJwtAuthenticationConverter(OidcUserMapper oidcUserMapper, OidcProperties oidcProperties) {
+        return new ExtJmixJwtAuthenticationConverter(oidcUserMapper, oidcProperties);
     }
 
     @Bean

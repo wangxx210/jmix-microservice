@@ -1,5 +1,6 @@
 package ru.udya.services.department.security.auth.jwt;
 
+import io.jmix.oidc.OidcProperties;
 import io.jmix.oidc.jwt.JmixJwtAuthenticationConverter;
 import io.jmix.oidc.jwt.JmixJwtAuthenticationToken;
 import io.jmix.oidc.user.JmixOidcUser;
@@ -13,8 +14,8 @@ import java.util.Collections;
 
 public class ExtJmixJwtAuthenticationConverter extends JmixJwtAuthenticationConverter {
 
-    public ExtJmixJwtAuthenticationConverter(OidcUserMapper oidcUserMapper) {
-        super(oidcUserMapper);
+    public ExtJmixJwtAuthenticationConverter(OidcUserMapper oidcUserMapper, OidcProperties oidcProperties) {
+        super(oidcUserMapper,oidcProperties);
     }
 
     @Override
@@ -22,7 +23,12 @@ public class ExtJmixJwtAuthenticationConverter extends JmixJwtAuthenticationConv
         OidcIdToken oidcIdToken = OidcIdToken.withTokenValue(jwt.getTokenValue())
                 .claims(claims -> claims.putAll(jwt.getClaims()))
                 .build();
-        DefaultOidcUser oidcUser = new DefaultOidcUser(Collections.emptyList(), oidcIdToken, usernameClaimName);
+
+        String usernameClaimToUse = usernameClaimName != null ?
+                usernameClaimName :
+                oidcProperties.getJwtAuthenticationConverter().getUsernameClaim();
+
+        DefaultOidcUser oidcUser = new DefaultOidcUser(Collections.emptyList(), oidcIdToken, usernameClaimToUse);
         JmixOidcUser jmixOidcUser = oidcUserMapper.toJmixUser(oidcUser);
 
         // begin extension

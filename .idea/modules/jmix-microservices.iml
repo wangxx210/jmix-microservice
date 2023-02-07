@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="FacetManager">
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="Jmix EclipseLink" />
-        <datasource-mapping />
-        <naming-strategy-map />
-      </configuration>
-    </facet>
-  </component>
   <component name="JmixProjectModulesStateV2">
     <option name="hasState" value="true" />
     <option name="moduleState">
       <JmixModuleStateV2>
         <option name="artifactVersion" value="unspecified" />
-        <option name="buildFilePath" value="$MODULE_DIR$/../../build.gradle" />
+        <option name="buildFilePath" value="E:\GitHub\jmix-microservice\build.gradle" />
         <option name="buildSystemName" value="Gradle" />
-        <option name="jmixVersion" value="1.2.1" />
-        <option name="mavenLocalURI" value="file:$MAVEN_REPOSITORY$/" />
+        <option name="jmixVersion" value="1.4.4" />
+        <option name="mavenLocalURI" value="file:/D:/Maven%20repository/repository/" />
         <option name="moduleName" value="jmix-microservices" />
-        <option name="rootBuildFilePath" value="$MODULE_DIR$/../../build.gradle" />
+        <option name="rootBuildFilePath" value="E:\GitHub\jmix-microservice\build.gradle" />
         <option name="rootProjectName" value="jmix-microservices" />
       </JmixModuleStateV2>
     </option>

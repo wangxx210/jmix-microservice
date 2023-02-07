@@ -6,12 +6,12 @@
       <JmixModuleStateV2>
         <option name="artifactGroup" value="jmix-microservices" />
         <option name="artifactVersion" value="unspecified" />
-        <option name="buildFilePath" value="$MODULE_DIR$/../../../department-service/build.gradle" />
+        <option name="buildFilePath" value="E:\GitHub\jmix-microservice\department-service\build.gradle" />
         <option name="buildSystemName" value="Gradle" />
-        <option name="jmixVersion" value="1.2.1" />
-        <option name="mavenLocalURI" value="file:$MAVEN_REPOSITORY$/" />
+        <option name="jmixVersion" value="1.4.4" />
+        <option name="mavenLocalURI" value="file:/D:/Maven%20repository/repository/" />
         <option name="moduleName" value="department-service" />
-        <option name="rootBuildFilePath" value="$MODULE_DIR$/../../../build.gradle" />
+        <option name="rootBuildFilePath" value="E:\GitHub\jmix-microservice\build.gradle" />
         <option name="rootProjectName" value="jmix-microservices" />
       </JmixModuleStateV2>
     </option>
